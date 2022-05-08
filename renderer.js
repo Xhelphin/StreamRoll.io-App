@@ -153,3 +153,5 @@ d100Button.addEventListener('click', async () => {
     d20Button.classList.remove("d20activated")
     d100Button.classList.add("d100activated")
 })
+
+uuidInput.value = "UUID"

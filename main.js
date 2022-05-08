@@ -5,6 +5,8 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
+        icon: "favicon.png",
+        show: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -13,6 +15,10 @@ const createWindow = () => {
     })
 
     win.loadFile('index.html')
+    win.setMenuBarVisibility(false)
+    win.once('ready-to-show', () => {
+        win.show()
+    })
 }
 
 app.whenReady().then(() => {
