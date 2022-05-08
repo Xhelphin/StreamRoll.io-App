@@ -1,0 +1,22 @@
+{
+  "name": "streamroll-app",
+  "version": "1.0.0",
+  "description": "App to control streamroll.io from custom window",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xhelphin/StreamRoll.io-App.git"
+  },
+  "author": "Xhelphin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xhelphin/StreamRoll.io-App/issues"
+  },
+  "homepage": "https://github.com/Xhelphin/StreamRoll.io-App#readme",
+  "devDependencies": {
+    "electron": "^18.2.0"
+  }
+}
