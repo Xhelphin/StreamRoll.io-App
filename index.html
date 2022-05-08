@@ -3,14 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+        <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+        <link rel="stylesheet" href="index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <title>Streamroll App</title>
     </head>
     <body>
-        <h1>Streamroll App</h1>
-        App using Node.js <span id="node-version"></span>,
-        Chromium <span id="chrome-version"></span>,
-        and Electron <span id="electron-version"></span>.
+        <div class="toptext container-fluid">
+            <h1>Streamroll.io App</h1>
+            <p>An app to controll streamroll.io from a custom window.</p>
+        </div>
+        <div class="buttoncontainer container-fluid">
+            <a href="https://github.com/xhelphin/streamroll.io-app" target="_blank"><button class="githubbutton">View on GitHub</button></a>
+        </div>
+        <br>
+        <div class="formcontainer container-fluid">
+            <input type="text" id="uuidinput" name="uuidinput">
+        </div>
+        <br>
+        <div class="numbercontainer container-fluid">
+            <button class="onebutton" id="onebutton">1</button>
+            <button class="twobutton" id="twobutton">2</button>
+            <button class="threebutton" id="threebutton">3</button>
+            <button class="fourbutton" id="fourbutton">4</button>
+            <input type="text" id="custominput" name="custominput">
+        </div>
+        <br>
+        <div class="dicecontainer container-fluid">
+            <button class="d4button" id="d4button">D4</button>
+            <button class="d6button" id="d6button">D6</button>
+            <button class="d8button" id="d8button">D8</button>
+            <button class="d10button" id="d10button">D10</button>
+            <button class="d12button" id="d12button">D12</button>
+            <button class="d20button" id="d20button">D20</button>
+            <button class="d100button" id="d100button">D100</button>
+        </div>
+        <br>
+        <div class="sendcontainer container-fluid">
+            <button class="sendbutton" id="sendbutton">Roll Dice</button>
+        </div>
+        <div class="hidden">
+            <p id="number">1</p>
+            <p id="dice">4</p>
+        </div>
     </body>
+    <script src="./renderer.js"></script>
 </html>

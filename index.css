@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Raleway&display=swap');
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.toptext {
+    text-align: center;
+}
+
+.buttoncontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: white;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 8px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.githubbutton {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.githubbutton:hover {
+    background-color: black;
+    color: white;
+}
+
+.formcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dicecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sendcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitbutton {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.submitbutton:hover {
+    background-color: black;
+    color: white;
+}
+
+#uuidinput {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 4px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: text;
+    border-radius: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#custominput {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 4px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: text;
+    border-radius: 0px;
+    font-family: 'Raleway', sans-serif;
+    width: 75px;
+}
+
+.onebutton {
+    background-color: white;
+    color: purple;
+    border: 2px solid purple;
+}
+
+.onebutton:hover {
+    background-color: purple;
+    color: white;
+}
+
+.twobutton {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+
+.twobutton:hover {
+    background-color: green;
+    color: white;
+}
+
+.threebutton {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+.threebutton:hover {
+    background-color: blue;
+    color: white;
+}
+
+.fourbutton {
+    background-color: white;
+    color: #aaf;
+    border: 2px solid #aaf;
+}
+
+.fourbutton:hover {
+    background-color: #aaf;
+    color: white;
+}
+
+.oneactivated {
+    background-color: purple;
+    color: white;
+}
+
+.twoactivated {
+    background-color: green;
+    color: white;
+}
+
+.threeactivated {
+    background-color: blue;
+    color: white;
+}
+
+.fouractivated {
+    background-color: #aaf;
+    color: white;
+}
+
+.d4button {
+    background-color: white;
+    color: purple;
+    border: 2px solid purple;
+}
+
+.d4button:hover {
+    background-color: purple;
+    color: white;
+}
+
+.d4activated {
+    background-color: purple;
+    color: white;
+}
+
+.d6button {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+
+.d6button:hover {
+    background-color: green;
+    color: white;
+}
+
+.d6activated {
+    background-color: green;
+    color: white;
+}
+
+.d8button {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+.d8button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.d8activated {
+    background-color: blue;
+    color: white;
+}
+
+.d10button {
+    background-color: white;
+    color: #aaf;
+    border: 2px solid #aaf;
+}
+
+.d10button:hover {
+    background-color: #aaf;
+    color: white;
+}
+
+.d10activated {
+    background-color: #aaf;
+    color: white;
+}
+
+.d12button {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+}
+
+.d12button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.d12activated {
+    background-color: orange;
+    color: white;
+}
+
+.d20button {
+    background-color: white;
+    color: orangered;
+    border:2px solid orangered;
+}
+
+.d20button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.d20activated {
+    background-color: orangered;
+    color: white;
+}
+
+.d100button {
+    background-color: white;
+    color: #555;
+    border: 2px solid #555;
+}
+
+.d100button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.d100activated {
+    background-color: #555;
+    color: white;
+}
+
+.sendbutton {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.sendbutton:hover {
+    background-color: black;
+    color: white;
+}
+
+.hidden {
+    color: white;
+    font-size: 1px;
+    display: none;
+}
