@@ -93,6 +93,12 @@ button {
     cursor: text;
     border-radius: 0px;
     font-family: 'Raleway', sans-serif;
+    width: 30rem;
+}
+
+#uuidlabel {
+    font-size: 24px;
+    padding-top: 12px;
 }
 
 #custominput {
