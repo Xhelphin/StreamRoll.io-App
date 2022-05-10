@@ -345,3 +345,8 @@ button {
     font-size: 1px;
     display: none;
 }
+
+.spacer {
+    color: white;
+    font-size: 24px;
+}
