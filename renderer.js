@@ -37,6 +37,8 @@ sendButton.addEventListener('click', async () => {
         xmlHttp.open( "GET", url, false)
         xmlHttp.send( null )
     }
+    queueItems.innerText = ""
+    updateCurrentQueue()
 })
 
 function updateCurrentQueue() {
