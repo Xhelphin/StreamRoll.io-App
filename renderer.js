@@ -107,6 +107,10 @@ customInput.addEventListener('click', async () => {
     updateCurrentQueue()
 })
 
+customInput.addEventListener('keyup', async () => {
+    updateCurrentQueue()
+})
+
 d4Button.addEventListener('click', async () => {
     dice.innerText = "4"
     d4Button.classList.add("d4activated")
