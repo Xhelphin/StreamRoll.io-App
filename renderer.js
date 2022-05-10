@@ -25,7 +25,11 @@ var uri = 'https://streamroll.io/roll/'
 
 sendButton.addEventListener('click', async () => {
     updateCurrentQueue()
-    var itemToSend = queueItems.innerText + "+" + queueCurrent.innerText
+    if (queueItems.innerText == "") {
+        var itemToSend = queueCurrent.innerText
+    } else {
+        var itemToSend = queueItems.innerText + "+" + queueCurrent.innerText
+    }
     if (uuidInput.value != "") {
         console.log(itemToSend)
         let url = uri + uuidInput.value + '/' + itemToSend
