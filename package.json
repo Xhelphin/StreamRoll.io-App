@@ -61,11 +61,12 @@
   "build": {
     "appId": "com.xhelphin.streamroll-app",
     "win": {
-      "target": "portable"
+      "icon": "build/icon.png",
+      "target": "nsis"
     },
     "portable": {
       "unicode": false,
-      "artifactName": "my_electron_app.exe"
+      "artifactName": "streamroll-app.exe"
     }
   }
 }
