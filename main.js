@@ -5,7 +5,7 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
-        icon: "favicon.png",
+        icon: "icon.png",
         show: false,
         webPreferences: {
             nodeIntegration: true,
