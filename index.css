@@ -18,6 +18,20 @@ p {
     justify-content: center;
 }
 
+.queuecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#queuelabel {
+    font-size: 24px;
+}
+
+.itemhidden {
+    display: none;
+}
+
 button {
     background-color: white;
 	border: none;
@@ -77,6 +91,17 @@ button {
 
 .submitbutton:hover {
     background-color: black;
+    color: white;
+}
+
+.queuebutton {
+    background-color: white;
+    color: crimson;
+    border: 2px solid crimson;
+}
+
+.queuebutton:hover {
+    background-color: crimson;
     color: white;
 }
 

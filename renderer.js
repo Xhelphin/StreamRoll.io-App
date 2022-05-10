@@ -16,22 +16,40 @@ var d100Button = document.getElementById('d100button')
 var sendButton = document.getElementById('sendbutton')
 var number = document.getElementById('number')
 var dice = document.getElementById('dice')
+var queueBetweenPlus = document.getElementById("queuebetween+")
+var queueCurrent = document.getElementById("queuecurrent")
+var queueItems = document.getElementById("queueitems")
+var queueButton = document.getElementById("queuebutton")
 
 var uri = 'https://streamroll.io/roll/'
 
 sendButton.addEventListener('click', async () => {
+    updateCurrentQueue()
+    var itemToSend = queueItems.innerText + "+" + queueCurrent.innerText
     if (uuidInput.value != "") {
-        if (number.innerText == "5") {
-            var numOfDice = customInput.value
-        } else {
-            var numOfDice = number.innerText
-        }
-        let url = uri + uuidInput.value + '/' + numOfDice + 'd' + dice.innerText
+        console.log(itemToSend)
+        let url = uri + uuidInput.value + '/' + itemToSend
         var xmlHttp = new XMLHttpRequest()
         xmlHttp.open( "GET", url, false)
         xmlHttp.send( null )
     }
 })
+
+function updateCurrentQueue() {
+    if (number.innerText == "5") {
+        var numOfDice = customInput.value
+    } else {
+        var numOfDice = number.innerText
+    }
+    queueCurrent.innerText = numOfDice + "D" + dice.innerText
+    if (queueItems.innerText != "") {
+        queueBetweenPlus.classList.remove("itemhidden")
+    } else {
+        if (!(queueBetweenPlus.classList.contains("itemhidden"))) {
+            queueBetweenPlus.classList.add("itemhidden")
+        }
+    }
+}
 
 oneButton.addEventListener('click', async () => {
     number.innerText = "1"
@@ -40,6 +58,7 @@ oneButton.addEventListener('click', async () => {
     threeButton.classList.remove("threeactivated")
     fourButton.classList.remove("fouractivated")
     customInput.value = ""
+    updateCurrentQueue()
 })
 
 twoButton.addEventListener('click', async () => {
@@ -49,6 +68,7 @@ twoButton.addEventListener('click', async () => {
     threeButton.classList.remove("threeactivated")
     fourButton.classList.remove("fouractivated")
     customInput.value = ""
+    updateCurrentQueue()
 })
 
 threeButton.addEventListener('click', async () => {
@@ -58,6 +78,7 @@ threeButton.addEventListener('click', async () => {
     threeButton.classList.add("threeactivated")
     fourButton.classList.remove("fouractivated")
     customInput.value = ""
+    updateCurrentQueue()
 })
 
 fourButton.addEventListener('click', async () => {
@@ -67,6 +88,7 @@ fourButton.addEventListener('click', async () => {
     threeButton.classList.remove("threeactivated")
     fourButton.classList.add("fouractivated")
     customInput.value = ""
+    updateCurrentQueue()
 })
 
 customInput.addEventListener('click', async () => {
@@ -75,6 +97,7 @@ customInput.addEventListener('click', async () => {
     twoButton.classList.remove("twoactivated")
     threeButton.classList.remove("threeactivated")
     fourButton.classList.remove("fouractivated")
+    updateCurrentQueue()
 })
 
 d4Button.addEventListener('click', async () => {
@@ -86,6 +109,7 @@ d4Button.addEventListener('click', async () => {
     d12Button.classList.remove("d12activated")
     d20Button.classList.remove("d20activated")
     d100Button.classList.remove("d100activated")
+    updateCurrentQueue()
 })
 
 d6Button.addEventListener('click', async () => {
@@ -97,6 +121,7 @@ d6Button.addEventListener('click', async () => {
     d12Button.classList.remove("d12activated")
     d20Button.classList.remove("d20activated")
     d100Button.classList.remove("d100activated")
+    updateCurrentQueue()
 })
 
 d8Button.addEventListener('click', async () => {
@@ -108,6 +133,7 @@ d8Button.addEventListener('click', async () => {
     d12Button.classList.remove("d12activated")
     d20Button.classList.remove("d20activated")
     d100Button.classList.remove("d100activated")
+    updateCurrentQueue()
 })
 
 d10Button.addEventListener('click', async () => {
@@ -119,6 +145,7 @@ d10Button.addEventListener('click', async () => {
     d12Button.classList.remove("d12activated")
     d20Button.classList.remove("d20activated")
     d100Button.classList.remove("d100activated")
+    updateCurrentQueue()
 })
 
 d12Button.addEventListener('click', async () => {
@@ -130,6 +157,7 @@ d12Button.addEventListener('click', async () => {
     d12Button.classList.add("d12activated")
     d20Button.classList.remove("d20activated")
     d100Button.classList.remove("d100activated")
+    updateCurrentQueue()
 })
 
 d20Button.addEventListener('click', async () => {
@@ -141,6 +169,7 @@ d20Button.addEventListener('click', async () => {
     d12Button.classList.remove("d12activated")
     d20Button.classList.add("d20activated")
     d100Button.classList.remove("d100activated")
+    updateCurrentQueue()
 })
 
 d100Button.addEventListener('click', async () => {
@@ -152,4 +181,21 @@ d100Button.addEventListener('click', async () => {
     d12Button.classList.remove("d12activated")
     d20Button.classList.remove("d20activated")
     d100Button.classList.add("d100activated")
+    updateCurrentQueue()
 })
+
+queueButton.addEventListener('click', async () => {
+    updateCurrentQueue()
+    if (queueItems.innerText == "") {
+        queueItems.innerText = queueCurrent.innerText
+    } else {
+        queueItems.innerText = queueItems.innerText + "+" + queueCurrent.innerText
+    }
+    updateCurrentQueue()
+})
+
+/* Run at app start */
+oneButton.classList.add("oneactivated")
+d4Button.classList.add("d4activated")
+queueBetweenPlus.classList.add("itemhidden")
+updateCurrentQueue()
