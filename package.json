@@ -60,6 +60,7 @@
   },
   "build": {
     "appId": "com.xhelphin.streamroll-app",
+    "productName": "Streamroll App",
     "win": {
       "icon": "build/icon.png",
       "target": "nsis"
