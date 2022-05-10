@@ -105,6 +105,17 @@ button {
     color: white;
 }
 
+.clearbutton {
+    background-color: white;
+    color: navy;
+    border: 2px solid navy;
+}
+
+.clearbutton:hover {
+    background-color: navy;
+    color: white;
+}
+
 #uuidinput {
     background-color: white;
     border: 2px solid black;

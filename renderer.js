@@ -20,6 +20,7 @@ var queueBetweenPlus = document.getElementById("queuebetween+")
 var queueCurrent = document.getElementById("queuecurrent")
 var queueItems = document.getElementById("queueitems")
 var queueButton = document.getElementById("queuebutton")
+var clearButton = document.getElementById("clearbutton")
 
 var uri = 'https://streamroll.io/roll/'
 
@@ -197,6 +198,11 @@ queueButton.addEventListener('click', async () => {
     } else {
         queueItems.innerText = queueItems.innerText + "+" + queueCurrent.innerText
     }
+    updateCurrentQueue()
+})
+
+clearButton.addEventListener('click', async () => {
+    queueItems.innerText = ""
     updateCurrentQueue()
 })
 
